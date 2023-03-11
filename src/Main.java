@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -6,6 +8,8 @@ public class Main {
         question2();
 
         question3();
+
+        question4();
     }
 
     private static void question2() {
@@ -40,16 +44,22 @@ public class Main {
         sp1.search("Fulden","Dogan");
     }
 
+    private static void question4() {
+        System.out.println("Verileri girin");
+        Scanner input = new Scanner(System.in);
+        double px = input.nextDouble();
+        double py = input.nextDouble();
+        double pz = input.nextDouble();
+        double mass = input.nextDouble();
+        Particle p1 = new Particle(px,py,pz,mass);
+        System.out.println(p1.kineticEnergy());
+    }
+
     private static double getEuclidean(Point p1, Point p2) {
         double a = Math.pow(p1.getX() - p2.getX(), 2);
         double b = Math.pow(p1.getX() - p2.getX(), 2);
 
         return Math.sqrt(a + b);
     } // SORU 1
-
-
-
-
-
 
 }
